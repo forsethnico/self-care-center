@@ -6,3 +6,73 @@ dark-blue - #134d71;
 white - #ffffff;
 black - #000000;
 */
+
+body, html {
+  font-family: 'Quicksand', sans-serif;
+  background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 60px;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+}
+
+.box {
+  background-color: #ffffff;
+  width: 36%;
+  height: 90px;
+  border-radius: 6px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.message-choice {
+  font-style: italic;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+button {
+  border-radius: 6px;
+  background-color: #134d71;
+  padding: 5px 36px;
+  color: #ffffff;
+  border: 0px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+}
+
+.bell-box {
+  background-color: #ffffff;
+  width: 55%;
+  height: 145px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  height: 80px;
+  width: 80px;
+}
