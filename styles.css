@@ -7,7 +7,7 @@ white - #ffffff;
 black - #000000;
 */
 
-body, html {
+body {
   font-family: 'Quicksand', sans-serif;
   background-image: linear-gradient(#134d71, #78a7c6, #f7e4bf);
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ h2 {
   margin-bottom: 90px;
 }
 
-.message-choice {
+.radio-choice {
   font-style: italic;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -52,7 +52,7 @@ h2 {
   justify-content: space-evenly;
 }
 
-button {
+.receive-button {
   border-radius: 6px;
   background-color: #134d71;
   padding: 5px 36px;
@@ -62,7 +62,7 @@ button {
   font-size: 16px;
 }
 
-.bell-box {
+.meditation-box {
   background-color: #ffffff;
   width: 55%;
   height: 145px;
@@ -75,4 +75,8 @@ button {
 img {
   height: 80px;
   width: 80px;
+}
+
+p {
+  font-size: 25px;
 }
