@@ -33,23 +33,35 @@ var mantras = [
 ];
 
 var receiveMessageButton = document.querySelector('.receive-button')
-var selfCareMessage = document.querySelector('.meditation-box')
+var clearButton = document.querySelector('.clear-button')
 var affirmationRadio = document.querySelector('#affirmation')
-//var clearButton = document.querySelector('.clear-button');
+var mantraRadio = document.querySelector('#mantra')
+var meditationBox = document.querySelector('.meditation-box')
 
-receiveMessageButton.addEventListener('click', displayMessage)
-//clearButton.addEventListener('click', clearMessage)
+receiveMessageButton.addEventListener('click', displayMessage);
+clearButton.addEventListener('click', clearMessage);
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
 
 function displayMessage() {
-  //clearButton.classList.remove('hidden')
-  selfCareMessage.innerHTML = ""
+  meditationBox.innerHTML = ""
   if (affirmationRadio.checked) {
-      selfCareMessage.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
+    clearButton.classList.remove('hidden');
+    meditationBox.innerHTML = `<p>${affirmations[getRandomIndex(affirmations)]}</p>`;
+  } else if (mantraRadio.checked) {
+    clearButton.classList.remove('hidden');
+    meditationBox.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
   } else {
-    selfCareMessage.innerHTML = `<p>${mantras[getRandomIndex(mantras)]}</p>`;
+    meditationBox.innerHTML = `<img src="./assets/meditate.svg" alt="meditate">`
+    alert('Oops! Please select a choice!');
   }
+}
+
+function clearMessage() {
+  clearButton.classList.add('hidden');
+  mantraRadio.checked = false;
+  affirmationRadio.checked = false;
+  meditationBox.innerHTML = `<img src="./assets/meditate.svg" alt="meditate">`
 }
